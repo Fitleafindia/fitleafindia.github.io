@@ -3,147 +3,155 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>FitLeaf India Premium</title>
+<title>FitLeaf India Premium | Dry Stevia Leaves</title>
 
 <style>
-*{box-sizing:border-box}
+*{box-sizing:border-box;margin:0;padding:0}
 body{
- margin:0;
- font-family:Arial,sans-serif;
- background:#fafaf5;
- color:#173d2a;
+  font-family:Arial,sans-serif;
+  background:#f7faf6;
+  color:#18351f;
+  line-height:1.5
 }
 header{
- padding:16px 6%;
- display:flex;
- justify-content:space-between;
- align-items:center;
- background:white;
- border-bottom:1px solid #ddd;
+  background:#123d23;
+  color:white;
+  padding:18px 20px;
+  text-align:center;
+  position:sticky;
+  top:0;
+  z-index:10
 }
-.logo{font-size:23px;font-weight:bold}
-.logo small{
- display:block;
- font-size:9px;
- letter-spacing:3px;
- color:#b28a34;
-}
-.cart{
- padding:10px 18px;
- border-radius:25px;
- border:1px solid #173d2a;
- background:white;
-}
+.logo{font-size:25px;font-weight:800}
+.tag{font-size:12px;opacity:.85}
+
 .hero{
- max-width:1100px;
- margin:auto;
- padding:55px 6%;
- display:grid;
- grid-template-columns:1fr 1fr;
- gap:40px;
- align-items:center;
+  padding:35px 20px;
+  text-align:center;
+  background:linear-gradient(135deg,#eaf7e9,#ffffff)
 }
+.hero h1{font-size:34px;margin-bottom:10px}
+.hero p{font-size:16px;color:#53665a}
 .badge{
- font-size:12px;
- font-weight:bold;
- letter-spacing:2px;
- color:#a17b2c;
+  display:inline-block;
+  margin-top:15px;
+  padding:7px 14px;
+  background:#dcefd9;
+  border-radius:20px;
+  font-size:13px;
+  font-weight:bold
 }
-h1{
- font-size:55px;
- line-height:1;
- margin:15px 0;
+
+.product{
+  max-width:500px;
+  margin:25px auto;
+  padding:20px
 }
-h1 span{color:#2c6b45}
-p{
- color:#68736c;
- line-height:1.7;
+.card{
+  background:white;
+  border-radius:20px;
+  padding:18px;
+  box-shadow:0 8px 30px #00000012
 }
+.product-img{
+  width:100%;
+  height:300px;
+  object-fit:contain;
+  border-radius:15px;
+  background:#f5f7f3
+}
+h2{margin-top:18px;font-size:25px}
 .price{
- font-size:34px;
- font-weight:bold;
- margin:20px 0;
+  font-size:29px;
+  font-weight:800;
+  margin:8px 0
 }
-button{
- padding:14px 22px;
- border-radius:10px;
- font-weight:bold;
- cursor:pointer;
-}
-.buy{
- background:#1d5638;
- color:white;
- border:1px solid #1d5638;
-}
-.add{
- background:white;
- color:#1d5638;
- border:1px solid #1d5638;
-}
-.photo{
- background:#edf1e8;
- padding:20px;
- border-radius:25px;
-}
-.photo img{
- width:100%;
- height:430px;
- object-fit:contain;
+.mrp{
+  color:#777;
+  font-size:14px
 }
 .features{
- display:grid;
- grid-template-columns:repeat(3,1fr);
- background:#173d2a;
- color:white;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
+  margin:18px 0
 }
-.features div{
- text-align:center;
- padding:25px;
+.feature{
+  background:#f1f7ef;
+  padding:11px;
+  border-radius:10px;
+  font-size:13px
 }
-.features span{
- display:block;
- color:#cbd8ce;
- font-size:12px;
- margin-top:6px;
+.quantity{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:20px;
+  margin:18px
 }
-.product{
- max-width:1000px;
- margin:auto;
- padding:70px 6%;
- display:grid;
- grid-template-columns:1fr 1fr;
- gap:50px;
+.quantity button{
+  width:38px;height:38px;
+  border:0;border-radius:50%;
+  background:#174d2a;
+  color:white;font-size:20px
 }
-.box{
- background:#edf1e8;
- padding:22px;
- border-radius:15px;
+#qty{font-size:20px;font-weight:bold}
+
+.checkout{
+  margin-top:25px;
+  border-top:1px solid #ddd;
+  padding-top:20px
 }
-.about{
- text-align:center;
- background:#e8efe6;
- padding:60px 8%;
+input,textarea{
+  width:100%;
+  padding:13px;
+  margin:7px 0;
+  border:1px solid #d4ddd3;
+  border-radius:10px;
+  font-size:15px
 }
-.contact{
- text-align:center;
- background:#173d2a;
- color:white;
- padding:40px;
+textarea{height:85px}
+.total{
+  background:#edf7eb;
+  padding:15px;
+  border-radius:12px;
+  margin:12px 0
 }
-.contact a{color:white}
+.total div{
+  display:flex;
+  justify-content:space-between;
+  margin:5px 0
+}
+.total strong{font-size:18px}
+
+.btn{
+  width:100%;
+  border:0;
+  padding:15px;
+  border-radius:12px;
+  font-size:16px;
+  font-weight:bold;
+  cursor:pointer;
+  margin-top:8px
+}
+.whatsapp{background:#168c3a;color:white}
+.pay{background:#174d2a;color:white}
+
+.info{
+  max-width:500px;
+  margin:20px auto;
+  padding:20px
+}
+.info h3{margin-bottom:8px}
+.info p{font-size:14px;color:#53605a;margin-bottom:10px}
+
 footer{
- padding:20px 6%;
- display:flex;
- justify-content:space-between;
- font-size:12px;
- color:#68736c;
-}
-@media(max-width:700px){
- .hero,.product{grid-template-columns:1fr}
- h1{font-size:43px}
- .features{grid-template-columns:1fr}
- .photo img{height:330px}
- footer{display:block}
+  background:#123d23;
+  color:white;
+  text-align:center;
+  padding:25px 15px;
+  margin-top:30px;
+  font-size:13px
 }
 </style>
 </head>
@@ -151,147 +159,189 @@ footer{
 <body>
 
 <header>
-<div class="logo">
-🌿 FitLeaf India
-<small>PREMIUM</small>
-</div>
-
-<button class="cart" onclick="addCart()">🛒 Cart</button>
+  <div class="logo">🌿 FitLeaf India Premium</div>
+  <div class="tag">Pure • Natural • Premium</div>
 </header>
 
 <section class="hero">
-
-<div>
-<div class="badge">100% NATURAL & PURE</div>
-
-<h1>
-Dry Stevia <span>Leaves</span>
-</h1>
-
-<p>
-Premium dried stevia leaves, carefully selected and hygienically
-packed for your everyday use.
-</p>
-
-<div class="price">
-₹199 <small style="font-size:13px">/ 100g</small>
-</div>
-
-<button class="buy" onclick="buyNow()">BUY NOW</button>
-
-<button class="add" onclick="addCart()">ADD TO CART</button>
-</div>
-
-<div class="photo">
-<img src="product.jpg"
-alt="FitLeaf India Premium Dry Stevia Leaves">
-</div>
-
+  <h1>DRY STEVIA LEAVES</h1>
+  <p>Premium quality dried stevia leaves for your everyday needs.</p>
+  <div class="badge">100% Natural & Pure</div>
 </section>
-
-<div class="features">
-
-<div>
-🌿 <b>Natural</b>
-<span>100% dry stevia leaves</span>
-</div>
-
-<div>
-📦 <b>100g Pack</b>
-<span>Hygienically packed</span>
-</div>
-
-<div>
-🚚 <b>All India</b>
-<span>Delivery charges extra</span>
-</div>
-
-</div>
 
 <section class="product">
+<div class="card">
 
+<img src="product.jpg"
+     class="product-img"
+     alt="FitLeaf India Premium Dry Stevia Leaves 100g"
+     onerror="this.src='https://placehold.co/600x600/f1f7ef/174d2a?text=FitLeaf+India'">
+
+<h2>FitLeaf India Premium</h2>
+<p>DRY STEVIA LEAVES — 100g</p>
+
+<div class="price">₹199</div>
+<div class="mrp">MRP ₹199 (inclusive of applicable taxes)</div>
+
+<div class="features">
+<div class="feature">🌿 Natural Product</div>
+<div class="feature">📦 Net Qty: 100g</div>
+<div class="feature">✅ Quality Packed</div>
+<div class="feature">🇮🇳 Made in India</div>
+</div>
+
+<div class="quantity">
+<button onclick="changeQty(-1)">−</button>
+<span id="qty">1</span>
+<button onclick="changeQty(1)">+</button>
+</div>
+
+<div class="total">
 <div>
-<div class="badge">FITLEAF INDIA PREMIUM</div>
-
-<h2>Small Leaves. Big Difference.</h2>
-
-<p>
-Bring a natural sweetening option into your daily routine
-with FitLeaf India Premium Dry Stevia Leaves.
-</p>
+<span>Product</span>
+<span id="productTotal">₹199</span>
+</div>
+<div>
+<span>Delivery</span>
+<span id="delivery">₹49</span>
+</div>
+<div>
+<strong>Total</strong>
+<strong id="grandTotal">₹248</strong>
+</div>
 </div>
 
-<div class="box">
+<div class="checkout">
+<h3>📦 Order Details</h3>
 
-<b>Ingredients</b>
-<p>100% Dry Stevia Leaves</p>
+<input id="name" type="text" placeholder="Your Full Name">
+<input id="phone" type="tel" placeholder="Mobile Number">
+<input id="pincode" type="number" placeholder="PIN Code">
+<textarea id="address" placeholder="Complete Delivery Address"></textarea>
 
-<b>How to Use</b>
-<p>
-Use a small amount to sweeten tea or suitable preparations.
-</p>
+<button class="btn whatsapp" onclick="orderWhatsApp()">
+  📲 Order on WhatsApp
+</button>
 
-<b>Storage</b>
-<p>
-Store sealed in a cool, dry place away from direct sunlight.
+<button class="btn pay" onclick="payOnline()">
+  💳 Pay Online
+</button>
+
+<p style="font-size:12px;color:#777;margin-top:10px;text-align:center">
+Online payment only • Cash on Delivery not available
 </p>
 
 </div>
-
+</div>
 </section>
 
-<section class="about">
+<section class="info">
+<h3>🌿 Product Information</h3>
+<p><b>Ingredients:</b> 100% Dry Stevia Leaves</p>
+<p><b>Net Quantity:</b> 100g</p>
+<p><b>Storage:</b> Store in a cool, dry place away from moisture and direct sunlight.</p>
+<p><b>FSSAI License No.:</b> 22726398000969</p>
 
-<h2>Why FitLeaf India?</h2>
-
-<p>
-Premium presentation, carefully selected dried stevia leaves
-and simple packaging for Indian customers.
-</p>
-
-</section>
-
-<section class="contact">
-
-<h2>Need Help?</h2>
-
-<p>
-WhatsApp:
-<a href="https://wa.me/918218636047">
-+91 82186 36047
-</a>
-
-<br>
-
-Email:
-<a href="mailto:gopalrana9917@gmail.com">
-gopalrana9917@gmail.com
-</a>
-</p>
-
+<h3>📞 Contact</h3>
+<p>FitLeaf India Premium</p>
+<p>Phone: 8218636047</p>
+<p>Email: gopalrana9917@gmail.com</p>
 </section>
 
 <footer>
-
-<b>FitLeaf India Premium</b>
-
-<span>
-FSSAI No. 22726398000969 • MRP ₹199
-</span>
-
+© 2026 FitLeaf India Premium<br>
+Premium Dry Stevia Leaves
 </footer>
 
 <script>
 
-function addCart(){
- alert("Dry Stevia Leaves added to cart!");
+let qty = 1;
+const PRICE = 199;
+
+// Delivery charge — change 49 if your actual charge is different
+const DELIVERY_CHARGE = 49;
+
+function changeQty(value){
+  qty += value;
+
+  if(qty < 1) qty = 1;
+  if(qty > 10) qty = 10;
+
+  document.getElementById("qty").innerText = qty;
+
+  let productTotal = PRICE * qty;
+  let grandTotal = productTotal + DELIVERY_CHARGE;
+
+  document.getElementById("productTotal").innerText =
+    "₹" + productTotal;
+
+  document.getElementById("grandTotal").innerText =
+    "₹" + grandTotal;
 }
 
-function buyNow(){
- alert("Checkout opened. Online payment only — COD unavailable.");
+function orderWhatsApp(){
+
+  let name = document.getElementById("name").value.trim();
+  let phone = document.getElementById("phone").value.trim();
+  let pincode = document.getElementById("pincode").value.trim();
+  let address = document.getElementById("address").value.trim();
+
+  if(!name || !phone || !pincode || !address){
+    alert("Please fill all order details.");
+    return;
+  }
+
+  let productTotal = PRICE * qty;
+  let total = productTotal + DELIVERY_CHARGE;
+
+  let message =
+`🌿 FITLEAF INDIA PREMIUM
+
+📦 Product: DRY STEVIA LEAVES
+⚖️ Quantity: 100g
+🔢 Packets: ${qty}
+
+💰 Product Total: ₹${productTotal}
+🚚 Delivery: ₹${DELIVERY_CHARGE}
+💳 Total: ₹${total}
+
+👤 Name: ${name}
+📱 Phone: ${phone}
+📍 PIN Code: ${pincode}
+🏠 Address: ${address}
+
+Please confirm my order and send payment instructions.`;
+
+  let url =
+    "https://wa.me/91821863047?text=" +
+    encodeURIComponent(message);
+
+  window.open(url, "_blank");
+}
+
+function payOnline(){
+
+  /*
+   IMPORTANT:
+   Replace the link below with your REAL Razorpay Payment Link.
+   Do NOT put Razorpay secret/API keys in this HTML file.
+  */
+
+  const RAZORPAY_PAYMENT_LINK =
+    "YOUR_RAZORPAY_PAYMENT_LINK";
+
+  if(RAZORPAY_PAYMENT_LINK === "YOUR_RAZORPAY_PAYMENT_LINK"){
+    alert(
+      "Online payment abhi connect nahi hai. " +
+      "Pehle Razorpay Payment Link banakar code me paste karein."
+    );
+    return;
+  }
+
+  window.open(RAZORPAY_PAYMENT_LINK, "_blank");
 }
 
 </script>
 
 </body>
-  </html>
+ </html>
