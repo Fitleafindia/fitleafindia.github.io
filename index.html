@@ -7,7 +7,7 @@
 <title>FitLeaf India Premium | Dry Stevia Leaves 100g</title>
 
 <meta name="description"
-content="FitLeaf India Premium Dry Stevia Leaves. Carefully packed 100g dried stevia leaves. Order online.">
+content="FitLeaf India Premium Dry Stevia Leaves. Carefully packed 100g dried stevia leaves. Buy online.">
 
 <style>
 
@@ -358,13 +358,8 @@ textarea{
   cursor:pointer;
 }
 
-.order-btn{
+.buy-btn{
   background:#174d2a;
-  color:white;
-}
-
-.pay{
-  background:#285f38;
   color:white;
 }
 
@@ -375,9 +370,60 @@ textarea{
   margin-top:8px;
 }
 
-/* SUCCESS */
+/* PAYMENT */
 
-.success-box{
+.payment-box{
+  display:none;
+  background:#f0f8ed;
+  border:1px solid #c9dfc4;
+  border-radius:15px;
+  padding:18px;
+  margin-top:15px;
+  text-align:center;
+}
+
+.payment-box h3{
+  color:#1f6931;
+  margin-bottom:8px;
+}
+
+.upi-id{
+  background:white;
+  border-radius:10px;
+  padding:11px;
+  margin:10px 0;
+  font-size:17px;
+  font-weight:bold;
+  color:#174d2a;
+  word-break:break-all;
+}
+
+.payment-amount{
+  font-size:22px;
+  font-weight:800;
+  margin:8px 0;
+}
+
+.upi-btn{
+  display:block;
+  width:100%;
+  border:none;
+  border-radius:12px;
+  padding:14px;
+  margin-top:10px;
+  background:#174d2a;
+  color:white;
+  font-size:15px;
+  font-weight:bold;
+  text-decoration:none;
+}
+
+.payment-done{
+  background:#285f38;
+  color:white;
+}
+
+.order-success{
   display:none;
   background:#e8f7e6;
   border:1px solid #b8dcb5;
@@ -387,7 +433,7 @@ textarea{
   text-align:center;
 }
 
-.success-box h3{
+.order-success h3{
   color:#1f6931;
   margin-bottom:6px;
 }
@@ -518,7 +564,7 @@ details p{
 .contact p{
   font-size:14px;
   color:#56645a;
-  margin:3px;
+  margin:5px;
 }
 
 .contact a{
@@ -632,7 +678,7 @@ footer{
 </div>
 
 <a class="header-btn" href="#order">
-Order Now
+Buy Now
 </a>
 
 </div>
@@ -797,13 +843,10 @@ Select Quantity
 −
 </button>
 
-<span id="qty">
-1
-</span>
+<span id="qty">1</span>
 
 <button type="button" onclick="changeQty(1)">
-+
-</button>
++</button>
 
 </div>
 
@@ -830,12 +873,12 @@ Select Quantity
 </div>
 
 
-<!-- ORDER FORM -->
+<!-- BUY NOW FORM -->
 
 <div id="order">
 
 <h3 class="checkout-title">
-📦 Delivery Details
+📦 Enter Delivery Details
 </h3>
 
 <form id="orderForm">
@@ -875,7 +918,6 @@ name="Delivery Address"
 placeholder="Complete Delivery Address"
 required
 ></textarea>
-
 
 <!-- Hidden order details -->
 
@@ -921,6 +963,12 @@ value="248"
 
 <input
 type="hidden"
+name="Payment UPI ID"
+value="8218636047@upi"
+>
+
+<input
+type="hidden"
 name="_subject"
 value="🌿 New FitLeaf India Order"
 >
@@ -938,37 +986,74 @@ value="true"
 >
 
 <button
-class="btn order-btn"
+class="btn buy-btn"
 type="submit"
 >
-✅ Place Order
+🛒 BUY NOW
 </button>
 
 </form>
 
-
-<button
-class="btn pay"
-type="button"
-onclick="payOnline()"
->
-💳 Pay Online
-</button>
-
 <p class="note">
-Online payment • Cash on Delivery not available
+Online payment only • Cash on Delivery not available
 </p>
 
 
-<!-- SUCCESS MESSAGE -->
+<!-- PAYMENT BOX -->
 
 <div
-id="successBox"
-class="success-box"
+id="paymentBox"
+class="payment-box"
 >
 
 <h3>
-🎉 Order Placed Successfully
+💳 Complete Your Payment
+</h3>
+
+<p>
+Your order details have been submitted.
+</p>
+
+<div class="payment-amount">
+Pay: <span id="paymentAmount">₹248</span>
+</div>
+
+<div class="upi-id">
+UPI ID: 8218636047@upi
+</div>
+
+<a
+id="upiButton"
+class="upi-btn"
+href="#"
+>
+📱 PAY WITH UPI APP
+</a>
+
+<button
+type="button"
+class="btn payment-done"
+onclick="paymentDone()"
+>
+✅ PAYMENT DONE
+</button>
+
+<p class="note">
+Payment karne ke baad "PAYMENT DONE" dabayein.
+</p>
+
+</div>
+
+
+<!-- SUCCESS -->
+
+<div
+id="successBox"
+class="order-success"
+>
+
+<h3>
+🎉 Order Received
 </h3>
 
 <p>
@@ -1198,8 +1283,8 @@ How can I place an order?
 
 <p>
 Select your quantity, fill in your delivery details,
-and tap "Place Order". Your order details will be
-sent to FitLeaf India.
+and tap "BUY NOW". Your order details will be sent to
+FitLeaf India and the UPI payment option will open.
 </p>
 
 </details>
@@ -1270,9 +1355,13 @@ Phone:
 
 <p>
 Email:
-<a href="mailto:wealthwheels01@gmail.com">
-wealthwheels01@gmail.com
+<a href="mailto:gopalrana9917@gmail.com">
+gopalrana9917@gmail.com
 </a>
+</p>
+
+<p>
+<b>THE FOUNDER GOPAL RANA</b>
 </p>
 
 </section>
@@ -1303,6 +1392,8 @@ let qty = 1;
 
 const PRICE = 199;
 const DELIVERY_CHARGE = 49;
+
+const UPI_ID = "8218636047@upi";
 
 
 /* IMAGE GALLERY */
@@ -1360,6 +1451,9 @@ function updateTotal(){
   document.getElementById("productTotal")
     .innerText = "₹" + productTotal;
 
+  document.getElementById("delivery")
+    .innerText = "₹" + DELIVERY_CHARGE;
+
   document.getElementById("grandTotal")
     .innerText = "₹" + grandTotal;
 
@@ -1390,7 +1484,7 @@ function generateOrderId(){
 }
 
 
-/* ORDER SUBMISSION */
+/* BUY NOW */
 
 document
   .getElementById("orderForm")
@@ -1415,6 +1509,15 @@ document
       .value.trim();
 
 
+    if(!name || !phone || !pincode || !address){
+
+      alert("Please fill all delivery details.");
+
+      return;
+
+    }
+
+
     if(!/^[0-9]{10}$/.test(phone)){
 
       alert("Please enter a valid 10-digit mobile number.");
@@ -1433,13 +1536,7 @@ document
     }
 
 
-    if(!name || !address){
-
-      alert("Please fill all delivery details.");
-
-      return;
-
-    }
+    updateTotal();
 
 
     const orderId =
@@ -1448,9 +1545,6 @@ document
 
     document.getElementById("orderIdField")
       .value = orderId;
-
-
-    updateTotal();
 
 
     const formData =
@@ -1464,7 +1558,7 @@ document
     submitButton.disabled = true;
 
     submitButton.innerText =
-      "⏳ Placing Order...";
+      "⏳ Please wait...";
 
 
     try{
@@ -1486,80 +1580,95 @@ document
 
       if(!response.ok){
 
-        throw new Error("Order submission failed");
+        throw new Error("Order submiif(!response.ok){
 
-      }
+  throw new Error("Order submission failed");
 
-
-      document.getElementById("successOrderId")
-        .innerText = orderId;
+}
 
 
-      document.getElementById("successBox")
-        .style.display = "block";
+const productTotal =
+  PRICE * qty;
+
+const grandTotal =
+  productTotal + DELIVERY_CHARGE;
 
 
-      this.style.display = "none";
+document.getElementById("paymentAmount")
+  .innerText = "₹" + grandTotal;
 
 
-      document.getElementById("successBox")
-        .scrollIntoView({
-          behavior:"smooth",
-          block:"center"
-        });
+/* UPI PAYMENT LINK */
+
+const upiUrl =
+  "upi://pay" +
+  "?pa=" + encodeURIComponent(UPI_ID) +
+  "&pn=" + encodeURIComponent("FitLeaf India") +
+  "&am=" + encodeURIComponent(grandTotal.toFixed(2)) +
+  "&cu=INR" +
+  "&tn=" + encodeURIComponent("FitLeaf Order " + orderId);
 
 
-    }catch(error){
+document.getElementById("upiButton")
+  .href = upiUrl;
 
-      alert(
-        "Order submit nahi ho paya.\n\n" +
-        "Please internet connection check karke dobara try karein."
-      );
 
-      submitButton.disabled = false;
+document.getElementById("paymentBox")
+  .style.display = "block";
 
-      submitButton.innerText =
-        "✅ Place Order";
 
-    }
+submitButton.style.display = "none";
 
+
+document.getElementById("paymentBox")
+  .scrollIntoView({
+    behavior:"smooth",
+    block:"center"
   });
 
 
-/* ONLINE PAYMENT */
+}catch(error){
 
-function payOnline(){
-
-  /*
-    Yahan apna REAL Razorpay Payment Link add karna hai.
-
-    Example:
-    https://rzp.io/l/xxxxxxxx
-  */
-
-  const RAZORPAY_PAYMENT_LINK =
-    "YOUR_RAZORPAY_PAYMENT_LINK";
-
-
-  if(
-    RAZORPAY_PAYMENT_LINK ===
-    "YOUR_RAZORPAY_PAYMENT_LINK"
-  ){
-
-    alert(
-      "Online payment abhi connect nahi hai.\n\n" +
-      "Razorpay Payment Link banakar code me add karna hoga."
-    );
-
-    return;
-
-  }
-
-
-  window.open(
-    RAZORPAY_PAYMENT_LINK,
-    "_blank"
+  alert(
+    "Details submit nahi ho paaye.\n\n" +
+    "Internet connection check karke dobara try karein."
   );
+
+  submitButton.disabled = false;
+
+  submitButton.innerText =
+    "🛒 BUY NOW";
+
+}
+
+});
+
+
+/* PAYMENT DONE */
+
+function paymentDone(){
+
+  const orderId =
+    document.getElementById("orderIdField").value;
+
+
+  document.getElementById("successOrderId")
+    .innerText = orderId;
+
+
+  document.getElementById("successBox")
+    .style.display = "block";
+
+
+  document.getElementById("paymentBox")
+    .style.display = "none";
+
+
+  document.getElementById("successBox")
+    .scrollIntoView({
+      behavior:"smooth",
+      block:"center"
+    });
 
 }
 
@@ -1571,4 +1680,4 @@ updateTotal();
 </script>
 
 </body>
-   </html>
+</html>
